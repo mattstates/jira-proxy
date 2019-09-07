@@ -29,10 +29,13 @@ app.get('*', async (req, res) => {
         .join('&')
         .replace(`${LP_PATH_QUERY_PARAM}=`, '');
 
+    // TypeScript :any - There seems to be an issue with node-fetch RequestInit interface?
     const requestInit: any = {
         credentials: 'include',
         method: 'GET',
         headers: {
+            // API_CREDENTIALS consult Atlassian docs for generating this
+            // https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-basic-authentication/
             Authorization: API_CREDENTIALS,
             'Content-Type': 'application/json'
         }
