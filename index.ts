@@ -25,7 +25,7 @@ app.get('*', async (req, res) => {
             }
             return queryEntry.join('=');
         })
-        .filter(entry => Boolean(entry))
+        .filter((entry) => Boolean(entry))
         .join('&')
         .replace(`${LP_PATH_QUERY_PARAM}=`, '');
 
@@ -36,9 +36,9 @@ app.get('*', async (req, res) => {
         headers: {
             // API_CREDENTIALS consult Atlassian docs for generating this
             // https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-basic-authentication/
-            Authorization: API_CREDENTIALS,
-            'Content-Type': 'application/json'
-        }
+            'Authorization': API_CREDENTIALS,
+            'Content-Type': 'application/json',
+        },
     };
 
     try {

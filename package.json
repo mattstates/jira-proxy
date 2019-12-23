@@ -18,19 +18,19 @@
     "homepage": "https://github.com/mattstates/jira-proxy#readme",
     "dependencies": {
         "cors": "^2.8.5",
-        "dotenv": "^8.1.0",
+        "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "node-fetch": "^2.6.0"
     },
     "devDependencies": {
         "@types/cors": "^2.8.6",
-        "@types/express": "^4.17.1",
-        "@types/node-fetch": "^2.5.0",
-        "@types/node": "^12.7.4",
-        "nodemon": "^1.19.2",
+        "@types/express": "^4.17.2",
+        "@types/node": "^12.12.21",
+        "@types/node-fetch": "^2.5.4",
+        "nodemon": "^1.19.4",
         "ts-lint": "^4.5.1",
-        "ts-node": "^8.3.0",
-        "tslint": "^5.19.0",
-        "typescript": "^3.6.2"
+        "ts-node": "^8.5.4",
+        "tslint": "^5.20.1",
+        "typescript": "^3.7.4"
     }
 }
