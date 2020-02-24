@@ -5,6 +5,9 @@ const cors = require('cors');
 import * as express from 'express';
 import fetch from 'node-fetch';
 
+// Terrible, since this code is just for dev, I will use it. I don't know why this isn't an issue on Mac.
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const { API_CREDENTIALS, LP_APP_ID_QUERY_PARAM, LP_PATH_QUERY_PARAM } = process.env;
 
 const app = express();
@@ -36,7 +39,7 @@ app.get('*', async (req, res) => {
         headers: {
             // API_CREDENTIALS consult Atlassian docs for generating this
             // https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-basic-authentication/
-            'Authorization': API_CREDENTIALS,
+            "Authorization": API_CREDENTIALS,
             'Content-Type': 'application/json',
         },
     };
