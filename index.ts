@@ -39,7 +39,7 @@ app.get('*', async (req, res) => {
         headers: {
             // API_CREDENTIALS consult Atlassian docs for generating this
             // https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-basic-authentication/
-            "Authorization": API_CREDENTIALS,
+            'Authorization': API_CREDENTIALS,
             'Content-Type': 'application/json',
         },
     };
